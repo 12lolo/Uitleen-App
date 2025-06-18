@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="uitleen_app.Views.LoginPage"
+             Title="Inloggen">
+    <ScrollView>
+        <VerticalStackLayout Spacing="25" Padding="30">
+            <Image Source="dotnet_bot.png" HeightRequest="150" />
+            
+            <Label Text="Uitleen Systeem Firda" FontSize="28" HorizontalOptions="Center" />
+            <Label Text="Inloggen" FontSize="22" HorizontalOptions="Center" FontAttributes="Bold" />
+            
+            <Frame BorderColor="LightGray" CornerRadius="8" Padding="15" Margin="0,10,0,0">
+                <VerticalStackLayout Spacing="15">
+                    <Entry x:Name="EmailEntry" Placeholder="E-mail" Keyboard="Email" />
+                    <Entry x:Name="PasswordEntry" Placeholder="Wachtwoord" IsPassword="True" />
+                    
+                    <Button x:Name="LoginButton" Text="Inloggen" Clicked="OnLoginClicked" BackgroundColor="#512BD4" TextColor="White" />
+                    
+                    <Label Text="Nog geen account?" HorizontalOptions="Center" />
+                    <Button x:Name="RegisterButton" Text="Registreren" Clicked="OnRegisterClicked" BackgroundColor="Transparent" TextColor="#512BD4" BorderColor="#512BD4" BorderWidth="1" />
+                </VerticalStackLayout>
+            </Frame>
+            
+            <ActivityIndicator x:Name="ActivityIndicator" IsRunning="False" IsVisible="False" />
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
